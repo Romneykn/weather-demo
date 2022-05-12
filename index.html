@@ -16,27 +16,34 @@
   <body>
     <div class="center">
       <h1 class="text-center">How's the Weather?</h1>
-      <form id = "Forcast-length">
-        <h3 class = "text-center"> Length of Forecast?</h3>
-        <input type ="radio" id = "1 Day" name="Days" checked/>
-        <label for  = "1 Day">1 Day</label>
-        <input type ="radio" id = "3 Day" name="Days"/>
-        <label for  = "3 Day">3 Day</label>
-      </form>
+    </form>
+    <form id = "Forcast-length">
+      <h3 class = "text-center"> Length of Forecast?</h3>
+      <input type ="radio" id = "1 Day" name="Days" checked/>
+      <label for  = "1 Day">1 Day</label>
+      <input type ="radio" id = "3 Day" name="Days"/>
+      <label for  = "3 Day">3 Day</label>
+    </form>
+
       <form id="search-weather">
         <input type="text" id="search" />
         <input type="submit" id="submit"></input>
-      </form>
+
 
       <div class="result row text-center">
         <img class="weather_icon" src="images/trans.png" />
         <div id="location">Current weather in <span id="city"></span>, <span id="state"></span>.</div>
         <div class="description"></div>
+        <div class="description2"></div>
       </div>
     </div>
 
-    <script>
-    src="js/weather.js"
-    </script>
+    <script src="js/weather.js"></script>
   </body>
 </html>
+
+
+
+
+
+      
