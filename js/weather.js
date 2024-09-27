@@ -6,8 +6,7 @@ $(function () {
 
     // Get the weather info for the selected search location.
     $.get("/weather.php?query=" + $("#search").val(), function (data) {
-      // Show weather results.
-      if (data.temp_f) {
+      if (data.city) {
         showResult(data);
       } else {
         clearResult('No valid data for your location.');
@@ -24,12 +23,13 @@ $(function () {
   }
 
   function showResult(data) {
-    $(".weather_icon").attr("src", data.icon_url);
+    $(".weather_icon").attr("src", data.icon1);
     $("#location").show();
     $("#city").text(data.city);
     $("#state").text(data.state);
-    var desc = data.weather + " and " + data.temp_f + "&deg; F";
+    var desc = data.weather1 + " and " + data.temp1 + "&deg; F";
     $(".result .description").html(desc);
+
   }
 
 });
